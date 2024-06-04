@@ -2,6 +2,8 @@ services:
   etc-geth-node:
     image: etclabscore/core-geth
     container_name: etc-geth-node
+    volumes:
+      - ${LOCAL_DATADIR}/data:/root/logs/eth-classic-node
     ports:
       - 30303:30303
       - 8545:8545
