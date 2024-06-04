@@ -1,0 +1,12 @@
+services:
+  etc-geth-node:
+    image: etclabscore/core-geth
+    container_name: etc-geth-node
+    ports:
+      - 30303:30303
+      - 8545:8545
+    command:
+      - -classic
+      - -http
+      - --http.port
+      - "8545"
